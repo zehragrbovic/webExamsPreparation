@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Final and Midterm Makeup Exam 2023</title>
+    <link
+      rel="stylesheet"
+      href="//stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+      integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="//stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap-theme.min.css"
+      integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ"
+      crossorigin="anonymous"
+    />
+    <style>
+      .panel {
+        min-height: 390px;
+      }
+    </style>
+
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.datatables.net/1.11.6/js/jquery.dataTables.min.js"></script>
+
+<script src="https://code.highcharts.com/highcharts.js"></script>
+
+<!--
+    <script
+      src="https://code.jquery.com/jquery-1.12.4.min.js"
+      integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ"
+      crossorigin="anonymous"
+    ></script>
+-->
+
+    <script
+      src="//stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"
+      integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZh3w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button
+            type="button"
+            class="navbar-toggle collapsed"
+            data-toggle="collapse"
+            data-target="#navbar"
+            aria-expanded="false"
+            aria-controls="navbar"
+          >
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Midterm Exam</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Home</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container theme-showcase" role="main">
+      <div class="jumbotron">
+        <h1>
+          Welcome to Final and Midterm Makeup Exam at course Introduction to Web
+          Programming
+        </h1>
+        <p>
+          This is skeleton project to save you time on exam. You have to
+          populate missing snippet codes to make this project functional
+        </p>
+
+        <h3>
+          Following parts should be completed after complemetition of all exams
+          that you are going to submit
+        </h3>
+        <ul>
+          <li>
+            1. Make github repository (name it using your first name and last
+            name.). Make it PRIVATE. Add DzelilaMehanovic as collaborator.
+          </li>
+          <li>
+            2. Push your code to github (do not upload files)
+          </li>
+          <li>
+            3. Zip your code and upload to LMS quiz assignment.
+          </li>
+        </ul>
+        <h3>Following parts should be completed for MIDTERM MAKEUP</h3>
+        <ul>
+          <li>
+            1. Create midterm-exam database with one table named locations
+          </li>
+          <li>
+            2. Connection to MySQL database in rest/dao/BaseDao.php file per
+            TODO instructions in the file
+          </li>
+          <li>
+            3. REST endpoint rest/midterm/connection-check in
+            rest/routes/MidtermRoutes.php file per TODO instructions in the file
+            (optional and not graded)
+          </li>
+          <li>
+            4. REST endpoint rest/midterm/input_data in
+            rest/routes/MidtermRoutes.php file per TODO instructions in the file
+          </li>
+          <li>
+            5. REST endpoint rest/midterm/summary/@country in
+            rest/routes/MidtermRoutes.php file per TODO instructions in the file
+          </li>
+          <li>
+            6. REST endpoint rest/midterm/encoded in
+            rest/routes/MidtermRoutes.php file per TODO instructions in the file
+          </li>
+          <li>
+            7. REST endpoint rest/midterm/ip in rest/routes/MidtermRoutes.php
+            file per TODO instructions in the file
+          </li>
+          <li>
+            8. Service method input_data in rest/services/MidtermService.php
+            file
+          </li>
+          <li>
+            9. Service method summary in rest/services/MidtermService.php file
+          </li>
+          <li>
+            10. Service method encoded in rest/services/MidtermService.php file
+          </li>
+          <li>
+            11. Service method ip in rest/services/MidtermService.php file
+          </li>
+          <li>
+            12. DAO method input_data in rest/dao/MidtermDao.php file
+          </li>
+          <li>
+            13. DAO method summary in rest/dao/MidtermDao.php file
+          </li>
+          <li>
+            14. DAO method encoded in rest/dao/MidtermDao.php file
+          </li>
+          <li>
+            15. DAO method ip in rest/dao/MidtermDao.php file
+          </li>
+        </ul>
+
+        <h3>Following parts should be completed for FINAL</h3>
+        <ul>
+          <li>
+            1. Implement TODO #1 in index.html
+          </li>
+          <li>
+            2. Implement TODO #2 in index.html
+          </li>
+          <li>
+            3. Implement TODO #3 in index.html
+          </li>
+          <li>
+            4. Implement TODO #4 in index.html
+          </li>
+        </ul>
+      </div>
+      <div></div>
+    </div>
+
+
+    <div>
+      Dropdown list of countries:
+      <select id = "dropdown"  onchange = "selectOption()">
+        //options
+     </select>
+    </div>
+
+    <div>
+      <table id="locations", class="display", style="width: 100%;">
+        <thead>
+          <tr>
+            <th>City</th>
+            <th>City Count</th>
+          </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+      </table>
+    </div>
+
+    <div>
+      <table id="chartContainer", style="width:100%; height:1000px">
+        <thead>
+          <tr>
+            <th>Country</th>
+            <th>City Count</th></tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+      </table>
+    </div>
+
+  </body>
+
+  <script>
+    /*TODO #1
+     * Load content from IP2LOCATION.json file
+     * 10 points
+     */
+
+    $.getJSON("IP2LOCATION.json", function(data) {
+
+      console.log(data);
+
+      
+      /*TODO #2
+      * Create select dropdown and load unique countries from file within it
+      * -> unique means that one country appears only once
+      * You can use select2 library if you want
+      * 30 points
+      */
+      
+      //get a list of unique countries
+      const countries = [];
+      for(let i = 0; i < data.length; i++) {
+
+        if(!countries.includes(data[i].Country)) {
+          countries.push(data[i].Country);
+        }
+
+      }
+      console.log(countries);
+
+      //dropdown
+      const select = $("#dropdown");
+      for (let i = 0; i < countries.length; i++) {
+        let option = `<option value="${countries[i]}">${countries[i]}</option>`;
+        select.append(option);
+      }  
+
+
+    })
+
+    
+    function selectOption() {
+      var selectedValue = dropdown.options[dropdown.selectedIndex].text;
+      console.log(selectedValue);
+
+      $.getJSON("IP2LOCATION.json", function(data) {
+
+        
+      /*TODO #4
+        * Create pie chart that shows distribution of regions for selected country
+        * Show number of occurrences for each region for selected country
+        * 30 points
+        */
+
+        const regions = [];
+        var regionCount = [];
+        for(let i = 0; i < data.length; i++) {
+
+          if(selectedValue == data[i].Country) {
+            if(!regions.includes(data[i].Region)) {
+              regions.push(data[i].Region);
+              regionCount[regions.indexOf(data[i].Region)] = 1;
+            }
+            else {
+              regionCount[regions.indexOf(data[i].Region)] += 1;
+            }
+          }       
+
+        }
+
+        const chartData = [];
+        for(let i = 0; i < regions.length; i++) {
+          let temp = [regions[i], regionCount[i]];
+          chartData.push(temp);
+        }
+        console.log(chartData);
+
+        Highcharts.chart('chartContainer', {
+        chart: {
+          type: 'pie'
+        },
+        title: {
+          text: 'Distribution of Regions'
+        },
+        xAxis: {
+          type: 'category'
+        },
+        yAxis: {
+          title: {
+            text: ''
+          }
+        },
+        series: [{
+          name: '',
+          data: chartData
+        }]
+      });
+
+
+
+
+      /*TODO #3
+      * Use jQuery Datatable library to create HTML table with id = locations
+      * This table will list only unique cities from the country selected in select dropdown:
+      * together with total number of occurrences of that city available in file
+      * -> unique means that one country appears only once
+      * 30 points
+      */
+
+        //create a list of cities and their counts
+        const cities = [];
+        var cityCount = [];
+        for(let i = 0; i < data.length; i++) {
+
+          if(selectedValue == data[i].Country) {
+            if(!cities.includes(data[i].City)) {
+              cities.push(data[i].City);
+              cityCount[cities.indexOf(data[i].City)] = 1;
+            }
+            else {
+              cityCount[cities.indexOf(data[i].City)] += 1;
+            }
+          }       
+
+        }
+
+        const tableData = [];
+        for(let i = 0; i < cities.length; i++) {
+          let temp = [cities[i], cityCount[i]];
+          tableData.push(temp);
+        }
+        console.log(tableData);
+
+        //create the datatable
+/*
+        const tableBody = $('#locations tbody');
+        for (let i = 0; i < cities.length; i++) {
+          const row = `<tr><td>${cities[i]}</td><td>${cityCount[i]}</td></tr>`;
+          tableBody.append(row);
+        }
+*/
+        $('#locations').DataTable( {
+        data: tableData,
+        paging: true,
+        searching: true,
+        ordering: true,
+        columns: [
+          { title: "city" },
+          { title: "count" }
+        ],
+        "pageLength": 5,
+        "lengthMenu":  [2, 5, 10, 25, 50, "All"]
+      })
+
+        
+
+    })
+
+
+  }
+
+  </script>
+</html>
